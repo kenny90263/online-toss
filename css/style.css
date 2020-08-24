@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+
+body{
+    background: #e4e4e4;
+    text-align: center;
+}
+
+h1,h2,h3,h4,h5,h6,p,a,li,p,div,button,span{
+	font-family: "Microsoft JhengHei";
+}
+
+.d-none{
+    display: none !important;
+}
+
+#lots{
+    cursor: pointer;
+}
+
+/* 籤筒按鈕 */
+#lots_button{
+    background: none;
+    border: none;
+}
+
+
+/* 進行擲筊按鈕 */
+#toss{
+    display: block;
+    margin: 64px auto;
+    border: none;
+    background: #FFF;
+    padding: 15px 200px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* 擲筊結果框 */
+#toss_title{
+    background: #FFF;
+    padding: 15px 80px;
+    display: inline-block;
+    margin-bottom: 32px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+#toss-consult,#toss-description{
+    display: block;
+    
+}
+
+#toss-consult{
+    margin-bottom: 20px;
+}
+
+/* 觀看籤詩說明按鈕 */
+#view{
+    text-decoration: none;
+    display: inline-block;
+    background: #FFF;
+    padding: 10px 100px;
+    color: #000000;
+    margin-top: 64px;
+}
+
+#view:hover{
+    color: #FFF;
+    background: #bb6565;
+}

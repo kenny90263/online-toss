@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+    <link rel="stylesheet" href="css/style.css">
+    <title>線上擲筊</title>
+</head>
+
+<body>
+
+
+    <p><span id="number_area">請點籤筒</span><span id="number"></span><span id="number_d" class="d-none">號籤</span></p>
+
+    <button id="lots_button" onclick="click_lickbox()"><img id="lots" src="images/lots.png"></button>
+
+    <!-- 進行擲筊按鈕 -->
+    <button id="toss" onclick="click_toss()" class="d-none">進行擲筊</button>
+
+
+    <span class="d-none" id="toss_title">
+        <span id="toss-consult"></span>
+        <span id="toss-description"></span>
+    </span>
+
+    <div class="toss-images">
+        <img id="toss_1" class="d-none" src="images/1.png">
+        <img id="toss_2" class="d-none" src="images/4.png">
+    </div>
+
+    <a id="view" class="d-none">觀看籤詩說明</a>
+
+    <div id="at_description">
+        <p>聖筊：呈現一凸、一平，表示神明聖裁「對、好、可以、肯定、贊同、可以」。</p>
+        <p> 笑筊：呈現平、平，表示陳述不清楚無法裁示。代表「笑笑、不知如何回答、信徒講述不清、信徒已有答案何必再問」。</p>
+        <p>陰筊：呈現凸、凸，表示神明聖裁「不對、不好、不可以、不贊同、否定」。依廟宇傳統，凡是重大事情獲陰筊時，不宜於短期內再請筊。</p>
+    </div>
+
+    <script src="js/all.js"></script>
+</body>
+
+</html>
