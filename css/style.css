@@ -2,8 +2,8 @@
 
 
 body{
-    background: #e4e4e4;
-    text-align: center;
+    /*background: #e4e4e4;
+    text-align: center;*/
 }
 
 h1,h2,h3,h4,h5,h6,p,a,li,p,div,button,span{
@@ -13,6 +13,38 @@ h1,h2,h3,h4,h5,h6,p,a,li,p,div,button,span{
 .d-none{
     display: none !important;
 }
+
+.online-toss{
+    background: #F4ECBB;
+    max-width: 55%;
+    margin: 64px auto;
+    padding: 32px 32px;
+    border-style: double;
+    border-width: 7px;
+    border-color: #6E0E0B;
+}
+
+
+/* 籤筒圖片 */
+.toss-photo{
+    float: left;
+    max-width: 40%;
+    height: auto;
+    background: pink;
+    display: block;
+
+}
+
+.description{
+    background: yellow;
+    float: left;
+    
+}
+
+
+
+
+
 
 #lots{
     cursor: pointer;
