@@ -16,34 +16,69 @@ h1,h2,h3,h4,h5,h6,p,a,li,p,div,button,span{
 
 .online-toss{
     background: #F4ECBB;
-    max-width: 55%;
     margin: 64px auto;
     padding: 32px 32px;
     border-style: double;
     border-width: 7px;
     border-color: #6E0E0B;
+    max-width: 55%;
+    max-height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 
 /* 籤筒圖片 */
 .toss-photo{
-    float: left;
+    display: flex;
     max-width: 40%;
     height: auto;
     background: pink;
-    display: block;
+}
 
+@media(min-width: 991px){
+    .description{
+        flex: 0 0 60%;
+        max-width: 60%;
+        
+    }
 }
 
 .description{
+    display: flex;
+    align-items: center;
     background: yellow;
-    float: left;
+    
+
+}
+
+.description p{
+    font-size: 1.2em;
+    color: #9C5017;
+    font-weight: bold;
     
 }
 
+#start{
+    
+    padding: 10px 20px;
+    border: none;
+    background: #944309;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 1.1em;
+    border-radius: 6px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;  /* Safari */
+    transition-duration: 0.4s;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    
+}
 
-
-
+#start:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
 
 
 #lots{
