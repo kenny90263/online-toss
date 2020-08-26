@@ -1,28 +1,25 @@
+// 重新抽籤事件
+function back() {
+    document.getElementById("lots").classList.remove("d-none");
+    document.getElementById("toss_title").classList.add("d-none");
+    document.getElementById("toss-images").classList.add("d-none");
+    document.getElementById("back").classList.add("d-none");
+}
+
 // 籤筒 click 事件
 function click_lickbox() {
-
-    document.getElementById("toss").classList.add("d-none");
-    document.getElementById("toss_title").classList.add("d-none");
-    document.getElementById("toss_1").classList.add("d-none");
-    document.getElementById("toss_2").classList.add("d-none");
-    document.getElementById("toss").disabled = false;
-
-    // 點選籤筒後 鎖住籤筒不讓再次點擊
-    document.getElementById("lots_button").disabled = true;
-    // 將 "號籤" 單位顯示出來
-    document.getElementById("number_d").classList.remove("d-none");
-    // 將 請點籤筒改成求得
-    document.getElementById("number_area").innerHTML = "求得";
-
+    // 隱藏描述
+    document.getElementById("description").classList.add("d-none");
+    // 顯示抽到的籤號
+    document.getElementById("step_2").classList.remove("d-none");
     // 亂數的速度
     var int = self.setInterval(draw_straws, 50);
 
+    // 取得籤筒圖片 Dom
     var img = document.getElementById("lots");
-
     var rotate_1 = self.setInterval(function () {
         img.style.transform = 'rotate(20deg)';
     }, 250);
-
     var rotate_2 = self.setInterval(function () {
         img.style.transform = 'rotate(-20deg)';
     }, 230);
@@ -38,13 +35,13 @@ function click_lickbox() {
     }, 2500);
 }
 
-// 抽籤亂數
+// 抽籤亂數 cb
 function draw_straws() {
     var x = document.getElementById("number");
     x.innerHTML = Math.floor((Math.random() * 100) + 1);
 }
 
-// 顯示 "進行擲筊" 按鈕
+// 顯示 "進行擲筊" 按鈕 cb
 function toss_move() {
     var toss = document.getElementById("toss");
     toss.classList.remove("d-none");
@@ -53,7 +50,9 @@ function toss_move() {
 // 擲筊 onclick 事件
 function click_toss() {
 
-    document.getElementById("toss").disabled = true;
+    document.getElementById("toss-images").classList.remove("d-none");
+    document.getElementById("step_2").classList.add("d-none");
+    document.getElementById("lots").classList.add("d-none");
 
     var toss_1 = document.getElementById("toss_1");
     var toss_2 = document.getElementById("toss_2");
@@ -65,8 +64,6 @@ function click_toss() {
 
     setTimeout(function () {
         clearInterval(toss);
-
-
         // 取得 toss_1 圖片檔名
         var fullPath_1 = document.getElementById("toss_1").src;
         var filename_1 = fullPath_1.replace(/^.*[\\\/]/, '');
@@ -79,7 +76,7 @@ function click_toss() {
         if (filename_1 == "1.png" && filename_2 == "4.png") {
             document.getElementById("toss_title").classList.remove("d-none");
             document.getElementById("toss-consult").textContent = "聖筊";
-            document.getElementById("toss-description").textContent = "請觀看以下籤詩及說明";
+            document.getElementById("toss-description").textContent = "求籤成功，請領取籤詩";
 
             // 出現觀看籤詩及說明連結
             var num = document.getElementById("number").textContent;
@@ -91,7 +88,7 @@ function click_toss() {
         else if (filename_1 == "2.png" && filename_2 == "3.png") {
             document.getElementById("toss_title").classList.remove("d-none");
             document.getElementById("toss-consult").textContent = "聖筊";
-            document.getElementById("toss-description").textContent = "請觀看以下籤詩及說明";
+            document.getElementById("toss-description").textContent = "求籤成功，請領取籤詩";
 
             // 出現觀看籤詩及說明連結
             var num = document.getElementById("number").textContent;
@@ -103,19 +100,13 @@ function click_toss() {
         else if (filename_1 == "1.png" && filename_2 == "3.png") {
             document.getElementById("toss_title").classList.remove("d-none");
             document.getElementById("toss-consult").textContent = "笑筊";
-            document.getElementById("toss-description").textContent = "請按籤筒重新求籤";
-
-
-            document.getElementById("lots_button").disabled = false;
+            document.getElementById("back").classList.remove("d-none");
         }
         // 陰筊
         else if (filename_1 == "2.png" && filename_2 == "4.png") {
             document.getElementById("toss_title").classList.remove("d-none");
             document.getElementById("toss-consult").textContent = "陰筊";
-            document.getElementById("toss-description").textContent = "請按籤筒重新求籤";
-
-
-            document.getElementById("lots_button").disabled = false;
+            document.getElementById("back").classList.remove("d-none");
         }
     }, 2500);
 }

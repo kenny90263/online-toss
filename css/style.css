@@ -1,11 +1,4 @@
 @charset "utf-8";
-
-
-body{
-    /*background: #e4e4e4;
-    text-align: center;*/
-}
-
 h1,h2,h3,h4,h5,h6,p,a,li,p,div,button,span{
 	font-family: "Microsoft JhengHei";
 }
@@ -17,51 +10,49 @@ h1,h2,h3,h4,h5,h6,p,a,li,p,div,button,span{
 .online-toss{
     background: #F4ECBB;
     margin: 64px auto;
+    max-width: 75%;
     padding: 32px 32px;
     border-style: double;
     border-width: 7px;
     border-color: #6E0E0B;
-    max-width: 55%;
-    max-height: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
-
 
 /* 籤筒圖片 */
 .toss-photo{
-    display: flex;
-    max-width: 40%;
+    max-width: 60%;
     height: auto;
-    background: pink;
+    flex: 0 0 100%;
 }
 
 @media(min-width: 991px){
-    .description{
-        flex: 0 0 60%;
-        max-width: 60%;
-        
+    .online-toss{
+        max-width: 55%;
     }
-}
 
-.description{
-    display: flex;
-    align-items: center;
-    background: yellow;
+    .toss-photo{
+        max-width: 45%;
+        flex: 0 0 45%;
+    }
     
-
+    .description{
+        flex: 0 0 65%;
+        max-width: 45%;
+    }
 }
 
 .description p{
     font-size: 1.2em;
     color: #9C5017;
     font-weight: bold;
-    
 }
 
-#start{
-    
+#lots_button{
+    margin: 0 auto;
+    display: block;
     padding: 10px 20px;
     border: none;
     background: #944309;
@@ -73,67 +64,57 @@ h1,h2,h3,h4,h5,h6,p,a,li,p,div,button,span{
     -webkit-transition-duration: 0.4s;  /* Safari */
     transition-duration: 0.4s;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    
 }
 
-#start:hover{
+#lots_button:hover{
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-
-#lots{
-    cursor: pointer;
+#step_2 p{
+    color: #B24234;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
 }
-
-/* 籤筒按鈕 */
-#lots_button{
-    background: none;
-    border: none;
-}
-
 
 /* 進行擲筊按鈕 */
-#toss{
+#toss,#back{
+    margin: 0 auto;
     display: block;
-    margin: 64px auto;
+    padding: 10px 20px;
     border: none;
-    background: #FFF;
-    padding: 15px 200px;
-    font-size: 1.2em;
+    background: #944309;
+    color: #FFF;
     font-weight: bold;
+    font-size: 1.1em;
+    border-radius: 6px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;  /* Safari */
+    transition-duration: 0.4s;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-/* 擲筊結果框 */
-#toss_title{
-    background: #FFF;
-    padding: 15px 80px;
-    display: inline-block;
-    margin-bottom: 32px;
-    font-weight: bold;
+#toss:hover,#back:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#toss-images{
     text-align: center;
-    font-size: 1.2em;
+}
+
+#toss_title{
+    width: 60%;
+    text-align: center;
 }
 
 #toss-consult,#toss-description{
+    color: #6E0E0B;
+    font-weight: bold;
+    font-size: 1.5em;
     display: block;
-    
+    margin-bottom: 32px;
 }
 
-#toss-consult{
-    margin-bottom: 20px;
-}
-
-/* 觀看籤詩說明按鈕 */
 #view{
     text-decoration: none;
-    display: inline-block;
-    background: #FFF;
-    padding: 10px 100px;
-    color: #000000;
-    margin-top: 64px;
-}
-
-#view:hover{
-    color: #FFF;
-    background: #bb6565;
 }

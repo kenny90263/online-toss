@@ -5,74 +5,33 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
-    <link src="stylesheet" href="css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>線上擲筊</title>
 </head>
 
 <body>
 
-
-
-
     <div class="online-toss">
-
-
-        <div class="row">
-
-            <div class="col-md-4">
-                123
-            </div>
-
-            <div class="col-md-8">
-                456
-            </div>
-
-
-        </div>
-
-
-        <img class="toss-photo" src="images/lots.png">
-        <div class="description">
+        <img id="lots" class="toss-photo" src="images/lots.png">
+        <div id="description" class="description">
             <p>請虔誠地在心中默念您的姓名、出生年月日、住址後，誠心祈求城隍爺，指點迷津。</p>
             <p>您心中想請教的事情詳細說明後，再點選"開始求籤"按鈕進行線上求籤。</p>
-            <button id="start">開始求籤</button>
+            <button id="lots_button" onclick="click_lickbox()">開始求籤</button>
         </div>
-
-
-
-
-    </div>
-
-
-
-
-
-
-    <p><span id="number_area">請點籤筒</span><span id="number"></span><span id="number_d" class="d-none">號籤</span></p>
-
-    <button id="lots_button" onclick="click_lickbox()"><img id="lots" src="images/lots.png"></button>
-
-    <!-- 進行擲筊按鈕 -->
-    <button id="toss" onclick="click_toss()" class="d-none">進行擲筊</button>
-
-
-    <span class="d-none" id="toss_title">
-        <span id="toss-consult"></span>
-        <span id="toss-description"></span>
-    </span>
-
-    <div class="toss-images">
-        <img id="toss_1" class="d-none" src="images/1.png">
-        <img id="toss_2" class="d-none" src="images/4.png">
-    </div>
-
-    <a id="view" class="d-none">觀看籤詩說明</a>
-
-    <div id="at_description">
-        <p>聖筊：呈現一凸、一平，表示神明聖裁「對、好、可以、肯定、贊同、可以」。</p>
-        <p> 笑筊：呈現平、平，表示陳述不清楚無法裁示。代表「笑笑、不知如何回答、信徒講述不清、信徒已有答案何必再問」。</p>
-        <p>陰筊：呈現凸、凸，表示神明聖裁「不對、不好、不可以、不贊同、否定」。依廟宇傳統，凡是重大事情獲陰筊時，不宜於短期內再請筊。</p>
+        <div id="step_2" class="d-none">
+            <p>您抽到<span id="number"></span>號籤</p>
+            <button id="toss" onclick="click_toss()" class="d-none">進行擲筊</button>
+        </div>
+        <div id="toss-images" class="d-none">
+            <img id="toss_1" src="images/1.png">
+            <img id="toss_2" src="images/4.png">
+        </div>
+        <div class="d-none" id="toss_title">
+            <span id="toss-consult"></span>
+            <span id="toss-description"></span>
+            <button id="back" onclick="click_lickbox();back();" class="d-none">重新求籤</button>
+            <a id="view" class="d-none">觀看籤詩說明</a>
+        </div>
     </div>
 
     <script src="js/all.js"></script>
